@@ -1,6 +1,8 @@
 package com.burakaycicek.landmarkbookkotlin
 
 import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.AdapterView
@@ -34,6 +36,9 @@ class MainActivity : AppCompatActivity() {
         landmarkList.add(colosseum)
         landmarkList.add(pantheon)
         landmarkList.add(florence)
+
+        //Inefficient
+        //val pisaBitmap = BitmapFactory.decodeResource(resources,R.drawable.pisa_tower)
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         val landmarkAdapter = LandmarkAdapter (landmarkList)
